@@ -28,6 +28,16 @@
     display:none;
     padding-top: 50px;
 }
+#btnContinuerMagasiner{
+    display: block;
+    margin: 20px auto;
+    padding: 10px 16px;
+    background-color: red;
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
 #entete h1{
     font-family: 'Arial';
     color: white;

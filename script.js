@@ -236,6 +236,11 @@ var noeudPanier = document.getElementById("panier");
 noeudPanier.style.cursor = "pointer";
 noeudPanier.addEventListener("click", afficheFacture);
 
+document.querySelector("#btnContinuerMagasiner").addEventListener("click", function(){
+    document.getElementById("zoneContenuFacture").style.display = "none";
+    document.getElementById("zoneContenuItem").style.display = "block";
+});
+
 // AJOUT : bouton "Ajouter" dans la zone détail (utilise la quantité saisie)
 document.querySelector("#unAjout").addEventListener("click", function(){
     if (produitCourant) {
