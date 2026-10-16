@@ -1,64 +1,70 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Ma boutique</title>
-		<!-- Lien vers le fichier CSS -->
-		<link rel="stylesheet" type="text/css" href="style.css"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ma boutique</title>
+    <!-- Lien vers le fichier CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css" />
 
-		<!-- Lien vers le fichier JavaScript -->
-		<script src="script.js" defer></script>
-	</head>
-	<body>
-		<header id="entete">
-			<h1>Zone d'entete </h1>
-			<button id="panier" type="button">
-				Nbre item : <span id="idItem">0</span> 
-			</button>
-		</header>
-		<main id="zoneContenuItem">
-			
-		</main>
-		<section id="zoneContenuFacture" aria-label="Facture">
-			<table border="1" width="50%" align="center">
-				<thead>
-					<tr>
-						<th scope="col">Description</th>
-						<th scope="col">Quantite</th>
-						<th scope="col">Prix unitaire</th>
-					</tr>
-				</thead>
-				<tbody id="corpsTableau">
-				</tbody>
-				<tfoot>
-   					 <tr>
-        				<th colspan="2">sous total :</th>
-        				<th id="idSousTotal">xxx</th>
-    				</tr>
-    				<tr>
-        				<th colspan="2">TVA :</th>
-        				<th id="idTVA">xxx</th>
-    				</tr>
-    				<tr>
-        				<th colspan="2">grand total :</th>
-        				<th id="idTotal">xxx</th>
-    				</tr>
-				</tfoot>
-			</table>
-			<button id="btnContinuerMagasiner" type="button">Continuer à magasiner</button>
-		</section>
-		<section id="zoneDetail" role="dialog" aria-modal="true" aria-label="Détail du produit">
-			<header id="petiteEntete">
-				<button id="idFermerDialogue" type="button">Fermer</button>
-			</header>
-			<img id="uneImage" alt="">
-			<p>Description : <span id="uneDescription">XXX</span></p>
-			<p>Prix : <span id="unPrix">XXX</span></p>
-			<p>Detail : <span id="unDetail">XXX</span></p>
-			<p><label for="txtQuantite">Qte :</label> <input type="text" id="txtQuantite" value="1" /></p>
-			<button id="unAjout" type="button">Ajouter</button>
-		</section>
-
-	</body>
+    <!-- Lien vers le fichier JavaScript -->
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header id="entete">
+      <h1>Zone d'entete</h1>
+      <button id="panier" type="button">
+        Nbre item : <span id="idItem">0</span>
+      </button>
+    </header>
+    <main id="zoneContenuItem"></main>
+    <section id="zoneContenuFacture" aria-label="Facture">
+      <table border="1" width="50%" align="center">
+        <thead>
+          <tr>
+            <th scope="col">Description</th>
+            <th scope="col">Quantite</th>
+            <th scope="col">Prix unitaire</th>
+          </tr>
+        </thead>
+        <tbody id="corpsTableau"></tbody>
+        <tfoot>
+          <tr>
+            <th colspan="2">sous total :</th>
+            <th id="idSousTotal">xxx</th>
+          </tr>
+          <tr>
+            <th colspan="2">TVA :</th>
+            <th id="idTVA">xxx</th>
+          </tr>
+          <tr>
+            <th colspan="2">grand total :</th>
+            <th id="idTotal">xxx</th>
+          </tr>
+        </tfoot>
+      </table>
+      <button id="btnContinuerMagasiner" type="button">
+        Continuer à magasiner
+      </button>
+    </section>
+    <section
+      id="zoneDetail"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Détail du produit"
+    >
+      <header id="petiteEntete">
+        <button id="idFermerDialogue" type="button">Fermer</button>
+      </header>
+      <img id="uneImage" alt="" />
+      <p>Description : <span id="uneDescription">XXX</span></p>
+      <p>Prix : <span id="unPrix">XXX</span></p>
+      <p>Detail : <span id="unDetail">XXX</span></p>
+      <p>
+        <label for="txtQuantite">Qte :</label>
+        <input type="text" id="txtQuantite" value="1" />
+      </p>
+      <button id="unAjout" type="button">Ajouter</button>
+    </section>
+  </body>
 </html>
