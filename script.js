@@ -88,29 +88,36 @@ function afficherListeProduits() {
         var description = item.description;
         var image = item.image;
         var prix = item.prix;
-        var noeudDivItem = document.createElement("div");
-        noeudDivItem.setAttribute("class", "item");
+        var noeudArticleItem = document.createElement("article");
+        noeudArticleItem.setAttribute("class", "item");
 
+        var noeudBoutonDetail = document.createElement("button");
+        noeudBoutonDetail.setAttribute("type", "button");
+        noeudBoutonDetail.setAttribute("class", "boutonDetail");
+        noeudBoutonDetail.setAttribute("aria-label", "Voir les détails de " + description);
         var noeudImage = document.createElement("img");
         noeudImage.setAttribute("class", "imageItem");
         noeudImage.setAttribute("src", image);
-        noeudDivItem.appendChild(noeudImage);
+        noeudImage.setAttribute("alt", description);
+        noeudBoutonDetail.appendChild(noeudImage);
+        noeudArticleItem.appendChild(noeudBoutonDetail);
 
-        noeudImage.addEventListener("click", function() {
+        noeudBoutonDetail.addEventListener("click", function() {
             afficherDetail(item);
         });
 
-        var noeudDescription = document.createElement("div");
+        var noeudDescription = document.createElement("p");
         noeudDescription.setAttribute("class", "description");
         noeudDescription.appendChild(document.createTextNode(description));
-        noeudDivItem.appendChild(noeudDescription);
+        noeudArticleItem.appendChild(noeudDescription);
 
-        var noeudPrix = document.createElement("div");
+        var noeudPrix = document.createElement("p");
         noeudPrix.setAttribute("class", "prix");
         noeudPrix.appendChild(document.createTextNode(prix));
-        noeudDivItem.appendChild(noeudPrix);
+        noeudArticleItem.appendChild(noeudPrix);
 
-        var noeudBtnAjouter = document.createElement("div");
+        var noeudBtnAjouter = document.createElement("button");
+        noeudBtnAjouter.setAttribute("type", "button");
         noeudBtnAjouter.setAttribute("class", "ajouter");
         noeudBtnAjouter.appendChild(document.createTextNode("Ajouter"));
         
@@ -120,15 +127,16 @@ function afficherListeProduits() {
         });
         // ---------------------------------------------------------------------
 
-        noeudDivItem.appendChild(noeudBtnAjouter);
+        noeudArticleItem.appendChild(noeudBtnAjouter);
 
-        document.getElementById("zoneContenuItem").appendChild(noeudDivItem);
+        document.getElementById("zoneContenuItem").appendChild(noeudArticleItem);
     });
 }
 function afficherDetail(unProduit){
     produitCourant = unProduit; // AJOUT
     document.querySelector("#zoneDetail").style.display = "block";
     document.querySelector("#uneImage").src = unProduit.image;
+    document.querySelector("#uneImage").alt = unProduit.description;
     document.querySelector("#uneDescription").innerHTML = unProduit.description;
     document.querySelector("#unPrix").innerHTML = unProduit.prix;
     document.querySelector("#unDetail").innerHTML = unProduit.details;

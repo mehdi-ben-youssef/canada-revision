@@ -1,32 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 	<head>
-		<meta charset="UTF-8" />
-		<title>Exercice 1</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Ma boutique</title>
 		<!-- Lien vers le fichier CSS -->
 		<link rel="stylesheet" type="text/css" href="style.css"/>
 
 		<!-- Lien vers le fichier JavaScript -->
 		<script src="script.js" defer></script>
-		
-		</style>
 	</head>
 	<body>
-		<div id="entete">
+		<header id="entete">
 			<h1>Zone d'entete </h1>
-			<div id="panier"> 
+			<button id="panier" type="button">
 				Nbre item : <span id="idItem">0</span> 
-			</div>
-		</div>
-		<div id="zoneContenuItem">
+			</button>
+		</header>
+		<main id="zoneContenuItem">
 			
-		</div>
-		<div id="zoneContenuFacture">
+		</main>
+		<section id="zoneContenuFacture" aria-label="Facture">
 			<table border="1" width="50%" align="center">
 				<thead>
-					<th>Description</th>
-					<th>Quantite</th>
-					<th>Prix unitaire</th>					
+					<tr>
+						<th scope="col">Description</th>
+						<th scope="col">Quantite</th>
+						<th scope="col">Prix unitaire</th>
+					</tr>
 				</thead>
 				<tbody id="corpsTableau">
 				</tbody>
@@ -46,27 +47,18 @@
 				</tfoot>
 			</table>
 			<button id="btnContinuerMagasiner" type="button">Continuer à magasiner</button>
-		</div>
-		<div id="zoneDetail">
-    <div id="petiteEntete">
-        <span id="idFermerDialogue">Fermer</span>
-    </div>
-    <img id="uneImage" />
-    <div>
-        Description : <span id="uneDescription">XXX</span>
-    </div>
-    <div>
-        Prix : <span id="unPrix">XXX</span>
-    </div>
-    <div>
-        Detail : <span id="unDetail">XXX</span>
-    </div>
-
-    <div>
-        Qte : <input type="text" id="txtQuantite" value="1" />
-    </div>
-    <div id="unAjout">Ajouter</div>
-</div>
+		</section>
+		<section id="zoneDetail" role="dialog" aria-modal="true" aria-label="Détail du produit">
+			<header id="petiteEntete">
+				<button id="idFermerDialogue" type="button">Fermer</button>
+			</header>
+			<img id="uneImage" alt="">
+			<p>Description : <span id="uneDescription">XXX</span></p>
+			<p>Prix : <span id="unPrix">XXX</span></p>
+			<p>Detail : <span id="unDetail">XXX</span></p>
+			<p><label for="txtQuantite">Qte :</label> <input type="text" id="txtQuantite" value="1" /></p>
+			<button id="unAjout" type="button">Ajouter</button>
+		</section>
 
 	</body>
 </html>

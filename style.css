@@ -58,6 +58,8 @@
     float: right;
     position: relative;
     top: -120px;
+    border: none;
+    font-size: inherit;
 }
 #idItem{
     color:red;
@@ -86,6 +88,17 @@
     text-align: center;
     cursor: pointer;
     user-select: none;
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+}
+.boutonDetail{
+    display: block;
+    padding: 0;
+    margin: 0 auto;
+    border: none;
+    background: transparent;
+    cursor: pointer;
 }
 #panier {
     cursor: pointer;
@@ -105,7 +118,7 @@
     text-align: center;
     box-sizing: border-box;
 }
-#zoneDetail > div{
+#zoneDetail > p{
     margin-bottom: 10px;
 }
 #zoneDetail #uneImage{
@@ -125,4 +138,7 @@
     float: right;
     cursor: pointer;
     user-select: none;
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
 }
