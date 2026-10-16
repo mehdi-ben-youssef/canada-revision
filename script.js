@@ -1,4 +1,8 @@
-/* 
+var listeProduits = [];
+var panier = [];
+var produitCourant = null; // AJOUT : produit affiché dans #zoneDetail
+const TAUX_TVA =0.19;
+/*
 // Variable globale
 var listeProduits = [];
 
@@ -33,11 +37,8 @@ function chargerZoneItem() {
     xhr.send();
 }
 */
-var listeProduits = [];
-var panier = [];
-var produitCourant = null; // AJOUT : produit affiché dans #zoneDetail
-const TAUX_TVA =0.19;
 
+/*
 async function chargerZoneItem() {
     const url = "produits.json";
 
@@ -65,8 +66,22 @@ async function chargerZoneItem() {
         // Gestion des erreurs réseau ou de statut HTTP incorrect
         alert("❌ Erreur lors de la récupération des données (" + error.message + ")");
     }
-}
+}*/
 
+async function chargerZoneItem() {
+    try {
+        const response = await fetch("produits.json");
+        if (!response.ok) {
+            throw new Error("Status " + response.status);
+        }
+
+        const donnees = await response.json();
+        listeProduits = donnees.liste;
+        afficherListeProduits();
+    } catch (error) {
+        alert("Erreur lors du chargement des produits : " + error.message);
+    }
+}
 
 function afficherListeProduits() {
     listeProduits.forEach(function(item) {
