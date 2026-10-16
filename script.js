@@ -139,6 +139,8 @@ function fermerDialogue(){
     document.querySelector("#zoneDetail").style.display = "none";
 }
 
+document.querySelector("#idFermerDialogue").addEventListener("click", fermerDialogue);
+
 // AJOUT : fonction commune utilisée par les 2 boutons "Ajouter"
 function ajouterAuPanier(produit, quantite){
     quantite = parseInt(quantite);
