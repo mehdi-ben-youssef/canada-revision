@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Exercice 1</title>
+		<!-- Lien vers le fichier CSS -->
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+
+		<!-- Lien vers le fichier JavaScript -->
+		<script src="script.js" defer></script>
+		
+		</style>
+	</head>
+	<body>
+		<div id="entete">
+			<h1>Zone d'entete </h1>
+			<div id="panier"> 
+				Nbre item : <span id="idItem">0</span> 
+			</div>
+		</div>
+		<div id="zoneContenuItem">
+			<div class="item">
+				<img class="imageItem" src="portable1.jpg" />
+				<div class="description">HP portatif </div>
+				<div class="prix">350.95</div>
+				<div class="ajouter" onclick="javascript:ajouterItem('HP portatif', '1', '350.95');">Ajouter</div>
+			</div>
+			<div class="item">
+				<img class="imageItem" src="portable2.jpg" />
+				<div class="description">Portatif Macbook Pro MF839LA</div>
+				<div class="prix">1549.95</div>
+				<div class="ajouter" onclick="javascript:ajouterItem('Portatif Macbook Pro MF839LA', '1', '1549.95');">Ajouter</div>
+			</div>
+			<div class="item">
+				<img class="imageItem" src="portable3.jpg" />
+				<div class="description">Portatif Macbook Air MJVE2C</div>
+				<div class="prix">1990.95</div>
+				<div class="ajouter" onclick="javascript:ajouterItem('Portatif Macbook Air MJVE2C', '1', '1990.95');">Ajouter</div>
+			</div>
+			<div class="item">
+				<img class="imageItem" src="portable4.jpg" />
+				<div class="description">MSI Portatif de jeu Leopard</div>
+				<div class="prix">1099.95</div>
+				<div class="ajouter" onclick="javascript:ajouterItem('MSI Portatif de jeu Leopard', '1', '1099.95');">Ajouter</div>
+			</div>
+			<div class="item">
+				<img class="imageItem" src="portable1.jpg" />
+				<div class="description">HP portatif 002 </div>
+				<div class="prix">450.95</div>
+				<div class="ajouter" onclick="javascript:ajouterItem('HP portatif 002', '1', '450.95');">Ajouter</div>
+			</div>
+			<div class="item">
+				<img class="imageItem" src="portable2.jpg" />
+				<div class="description">Portatif Macbook Pro MF849LA</div>
+				<div class="prix">1649.95</div>
+				<div class="ajouter" onclick="javascript:ajouterItem('Portatif Macbook Pro MF849LA', '1', '1649.95');">Ajouter</div>
+			</div>
+			<div class="item">
+				<img class="imageItem" src="portable3.jpg" />
+				<div class="description">Portatif Macbook Air MJKR9C</div>
+				<div class="prix">2340.95</div>
+				<div class="ajouter" onclick="javascript:ajouterItem('Portatif Macbook Air MJKR9C', '1', '2340.95');">Ajouter</div>
+			</div>
+			<div class="item">
+				<img class="imageItem" src="portable4.jpg" />
+				<div class="description">MSI Portatif de jeu Senders</div>
+				<div class="prix">1299.95</div>
+				<div class="ajouter" onclick="javascript:ajouterItem('MSI Portatif de jeu Senders', '1', '1299.95');">Ajouter</div>
+			</div>
+			<div class="item">
+				<img class="imageItem" src="portable1.jpg" />
+				<div class="description">HP portatif SIC</div>
+				<div class="prix">540.95</div>
+				<div class="ajouter" onclick="javascript:ajouterItem('HP portatif SIC', '1', '540.95');">Ajouter</div>
+			</div>
+			<div class="item">
+				<img class="imageItem" src="portable2.jpg" />
+				<div class="description">Portatif Macbook Pro MF989PZ</div>
+				<div class="prix">1859.95</div>
+				<div class="ajouter" onclick="javascript:ajouterItem('Portatif Macbook Pro MF989PZ', '1', '1859.95');">Ajouter</div>
+			</div>
+			<div class="item">
+				<img class="imageItem" src="portable3.jpg" />
+				<div class="description">Portatif Macbook Air MJHWV</div>
+				<div class="prix">1490.95</div>
+				<div class="ajouter" onclick="javascript:ajouterItem('Portatif Macbook Air MJHWV', '1', '1490.95');">Ajouter</div>
+			</div>
+			<div class="item">
+				<img class="imageItem" src="portable4.jpg" />
+				<div class="description">MSI Portatif de jeu Leo</div>
+				<div class="prix">2099.95</div>
+				<div class="ajouter" onclick="javascript:ajouterItem('MSI Portatif de jeu Leo', '1', '2099.95');">Ajouter</div>
+			</div>
+		</div>
+		<div id="zoneContenuFacture">
+			<table border="1" width="50%" align="center">
+				<thead>
+					<th>Description</th>
+					<th>Quantite</th>
+					<th>Prix unitaire</th>					
+				</thead>
+				<tbody id="corpsTableau">
+				</tbody>
+			</table>
+		</div>
+	</body>
+</html>

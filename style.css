@@ -1,0 +1,118 @@
+
+#entete{
+    background-color: red;
+    height: 170px;
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+#zoneContenuItem{
+    background-color: white;
+    width: 100%;
+    height: auto;
+    position:absolute;
+    left: 0px;
+    top: 170px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+#zoneContenuFacture{
+    background-color: white;
+    width: 100%;
+    height: auto;
+    position:absolute;
+    left: 0px;
+    top: 170px;
+    display:none;
+    padding-top: 50px;
+}
+#entete h1{
+    font-family: 'Arial';
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    position: relative;
+    top:50px
+}
+#panier{
+    background-color: blue;
+    width: 120px;
+    font-family: 'Arial';
+    font-size: 16px;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    float: right;
+    position: relative;
+    top: -120px;
+}
+#idItem{
+    color:red;
+    font-size: 18px;
+}
+.item{
+    display: inline-block;
+    color:blue;
+    font-size: 16px;
+    font-family: 'Arial';
+    text-align: center;
+    width: 20%;
+    margin-left: 50px;
+    padding-top: 30px;
+}
+/* MODIFIÉ : même style pour le bouton Ajouter de la liste et celui de #zoneDetail */
+.ajouter, #unAjout{
+    background-color:red;
+    width:50%;
+    height: 30px;
+    padding-top: 10px;
+    font-weight: bold;
+    margin-left: 25%;
+    margin-top: 10px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+}
+#panier {
+    cursor: pointer;
+}
+#zoneDetail {
+    display: none;
+    position: fixed;
+    top: 10%;
+    left: 25%;
+    width: 50%;
+    background: white;
+    border: 1px solid black;
+    z-index: 1000;
+    /* AJOUTS */
+    padding: 15px;
+    font-family: 'Arial';
+    text-align: center;
+    box-sizing: border-box;
+}
+#zoneDetail > div{
+    margin-bottom: 10px;
+}
+#zoneDetail #uneImage{
+    max-width: 100%;
+    max-height: 250px;
+}
+
+/* AJOUT : bouton Fermer */
+#petiteEntete{
+    overflow: hidden;
+}
+#idFermerDialogue{
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    padding: 8px 14px;
+    float: right;
+    cursor: pointer;
+    user-select: none;
+}
